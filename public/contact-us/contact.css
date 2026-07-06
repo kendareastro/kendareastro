@@ -1,0 +1,192 @@
+.contact-page {
+  background: #fff;
+  color: #273044;
+  padding: 44px 0 64px;
+}
+
+.contact-page h1,
+.contact-page h2 {
+  font-family: "Inter Local", Arial, sans-serif;
+}
+
+.contact-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 98px;
+  margin-bottom: 20px;
+  padding: 20px 24px;
+  background: #8c0000;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-hero::after {
+  position: absolute;
+  right: 0;
+  bottom: -36px;
+  left: 0;
+  height: 36px;
+  background: #f7f7f7;
+  content: "";
+}
+
+.contact-hero h1 {
+  margin-bottom: 4px;
+  color: #fff;
+  font-size: 27px;
+  line-height: 1.2;
+}
+
+.contact-hero p {
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.helpdesk-ribbon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+  width: 88px;
+  height: 88px;
+  background: linear-gradient(135deg, #000 0 50%, transparent 50% 100%);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  line-height: 1;
+  text-indent: -9999px;
+  text-transform: uppercase;
+}
+
+.helpdesk-ribbon::after {
+  position: absolute;
+  top: 29px;
+  left: 7px;
+  text-indent: 0;
+  content: "HelpDesk";
+  transform: rotate(-45deg);
+}
+
+.contact-form-band {
+  margin-top: 56px;
+  margin-bottom: 30px;
+  padding: 30px 0 44px;
+  background: #e9ecf2;
+}
+
+.contact-form-band iframe {
+  display: block;
+  width: min(100% - 40px, 760px);
+  height: 860px;
+  margin: 0 auto;
+  border: 0;
+}
+
+.company-details {
+  padding: 0 0 34px;
+}
+
+.company-details h2 {
+  margin: 0 0 20px;
+  color: #1f1a1a;
+  font-size: 29px;
+  text-align: center;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.contact-table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  background: #fff;
+  color: #000;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.contact-table th,
+.contact-table td {
+  border: 1px solid #ccc;
+  padding: 13px 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.contact-table th {
+  width: 39%;
+  color: #273044;
+  font-weight: 800;
+}
+
+.contact-table a {
+  color: #ef4d48;
+  font-weight: 800;
+}
+
+.legal-details {
+  margin-top: 42px;
+}
+
+.map-section iframe {
+  display: block;
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding-top: 26px;
+  }
+
+  .contact-hero {
+    width: min(100% - 24px, 1160px);
+    min-height: 116px;
+    padding: 24px 18px 22px 80px;
+    text-align: left;
+  }
+
+  .contact-hero h1 {
+    font-size: 24px;
+    text-align: left;
+  }
+
+  .contact-hero p {
+    font-size: 14px;
+  }
+
+  .contact-form-band {
+    width: min(100% - 24px, 1160px);
+    margin-top: 34px;
+    padding: 18px 0 28px;
+  }
+
+  .contact-form-band iframe {
+    width: calc(100% - 18px);
+    height: 900px;
+  }
+
+  .company-details {
+    width: min(100% - 24px, 1160px);
+  }
+
+  .company-details h2 {
+    font-size: 24px;
+  }
+
+  .contact-table {
+    min-width: 620px;
+    font-size: 13px;
+  }
+
+  .map-section {
+    width: min(100% - 24px, 1160px);
+  }
+}

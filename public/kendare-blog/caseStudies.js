@@ -2,10 +2,10 @@ window.caseStudies = [
   {
     id: 1,
     category: "New Case Studies",
-    title: "Judgment Before Judgment: Prashna Astrology Study of a Legal Battle",
+    title: "ලොව කළඹන මෙබඳු භීතිකා ඔබ අසා තිබුණාද?",
     imageUrl: "assets/prashna-legal-case.png",
-    description: "The Prashna Astrology was cast on 15 June 2026 at a decisive moment in a legal matter.",
-    caseStudyLink: ""
+    description: "මෙලොව ජීවත්වන පෘථග්ජනයන් ලෙස අප කවුරුත් වාගේ කුමන හෝ භීතිකාවකින් පෙළෙන බව කීම අසත්‍යයක් නොවේ....",
+    caseStudyLink: "https://kendareastro.com/public/kendare-blog/post-001.html"
   },
   {
     id: 2,

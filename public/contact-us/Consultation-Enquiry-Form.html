@@ -222,7 +222,7 @@
         </div>
         
         <div class="form-body">
-            <form action="#" method="POST">
+            <form method="POST"  id="contactForm">
                 
                 <!-- Name Field -->
                 <div class="form-group">
@@ -231,12 +231,12 @@
                         <div class="input-col">
                             <div class="input-wrapper">
                                 <i class="fa-regular fa-user"></i>
-                                <input type="text" class="has-icon" required>
+                                <input type="text" class="has-icon" required id="firstName">
                             </div>
                             <span class="sub-label">First Name</span>
                         </div>
                         <div class="input-col">
-                            <input type="text" required>
+                            <input type="text" required id="lastName" >
                             <span class="sub-label">Last Name</span>
                         </div>
                     </div>
@@ -255,14 +255,14 @@
                     <label>Email <span class="required">*</span></label>
                     <div class="input-wrapper">
                         <i class="fa-regular fa-envelope"></i>
-                        <input type="email" class="has-icon" required>
+                        <input type="email" class="has-icon" id="email" required>
                     </div>
                 </div>
 
                 <!-- Service Needed Field (Disabled) -->
                 <div class="form-group">
                     <label>Service Needed <span class="required">*</span></label>
-                    <select required disabled>
+                    <select id="service" required disabled>
                         <option value="Consultation" selected>Consultation</option>
                         <option value="Other">Other Services</option>
                     </select>
@@ -273,14 +273,14 @@
                     <label>Concern</label>
                     <div class="input-wrapper textarea-wrapper">
                         <i class="fa-regular fa-message"></i>
-                        <textarea class="has-icon" id="concern-text"></textarea>
+                        <textarea id="concern" class="has-icon"></textarea>
                         <button type="button" class="clear-btn" id="clear-btn">Clear</button>
                     </div>
                 </div>
 
                 <!-- Submit Button -->
                 <div class="submit-container">
-                    <button type="submit" class="submit-btn">Submit</button>
+                    <button type="submit" id="submitBtn" class="submit-btn">Submit</button>
                 </div>
 
             </form>
@@ -289,33 +289,6 @@
 
     <!-- Intl-Tel-Input JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-    
-    <script>
-        // 1. Initialize Country Code Dropdown
-        const phoneInputField = document.querySelector("#phone");
-        const phoneInput = window.intlTelInput(phoneInputField, {
-            initialCountry: "lk", // Defaults to Sri Lanka
-            preferredCountries: ["lk", "in", "us", "gb"], 
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-        });
-
-        // 2. Textarea Clear Animation Logic
-        const concernTextarea = document.getElementById("concern-text");
-        const clearBtn = document.getElementById("clear-btn");
-
-        clearBtn.addEventListener("click", () => {
-            if (concernTextarea.value.trim() !== "") {
-                // Add class to trigger CSS color transition (fade out text)
-                concernTextarea.classList.add("text-fade-out");
-                
-                // Wait for the transition to finish, then clear value and restore color
-                setTimeout(() => {
-                    concernTextarea.value = "";
-                    concernTextarea.classList.remove("text-fade-out");
-                    concernTextarea.focus(); // Return cursor to the cleared box
-                }, 300); // 300ms matches the CSS transition duration
-            }
-        });
-    </script>
+    <script src="contact.js"></script>
 </body>
 </html>
